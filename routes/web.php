@@ -14,10 +14,10 @@
 Route::get('/', ["uses" => "MasterController@index", "as" => "index"]);
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Route::get("/dashboard", ["uses" => "Admin\IndexController@index", "as" => "admin.index"]);
+Route::group(['prefix' => 'admin', "middleware" => ["auth", "admin"]], function () {
+    Route::get('/dashboard', ["uses" => "Admin\IndexController@index", "as" => "admin.index"]);
     Route::resource('users', 'Admin\UsersController');
-    
+    Route::resource("tovars", "Admin\TovarsController");
 });
 
 Auth::routes();

@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+﻿let mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -18,6 +18,7 @@ mix.styles([
     "resources/assets/admin/bootstrap/css/bootstrap.min.css",
     "resources/assets/admin/font-awesome/4.5.0/css/font-awesome.min.css",
     "resources/assets/admin/ionicons/2.0.1/css/ionicons.min.css",
+    "resources/assets/admin/plugins/datatables/dataTables.bootstrap.css",
     "resources/assets/admin/dist/css/AdminLTE.min.css",
     "resources/assets/admin/dist/css/skins/_all-skins.min.css",
 ], "public/admin/style.css");

@@ -4,11 +4,11 @@
     <!-- Sidebar user panel -->
     <div class="user-panel">
         <div class="pull-left image">
-        <img src="{{ asset('admin') }}/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            <img src="{{ auth()->user()->getAvatar() }}" class="img-circle" alt="{{ auth()->user()->getAvatar() }}">
         </div>
         <div class="pull-left info">
-        <p>Alexander Pierce</p>
-        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            <p>{{ auth()->user()->name . " " . auth()->user()->lastname }}</p>
+            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
     </div>
     <!-- search form -->
@@ -30,7 +30,14 @@
             <i class="fa fa-dashboard"></i> <span>Админ-панель</span>
         </a>
         </li>
-        <li><a href="#"><i class="fa fa-sticky-note-o"></i> <span>Посты</span></a></li>
+
+        <li>
+            <a href="{{ route('tovars.index') }}">
+                <i class="fa fa-sticky-note-o"></i> 
+                <span>Товары</span>
+            </a>
+        </li>
+
         <li><a href="#"><i class="fa fa-list-ul"></i> <span>Категории</span></a></li>
         <li><a href="#"><i class="fa fa-tags"></i> <span>Теги</span></a></li>
         <li>

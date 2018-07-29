@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', "lastname", "address", "phone", "avatar"
     ];
 
     /**
@@ -35,11 +35,28 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Role', 'role_user', 'user_id', 'role_id');
     }
 
+    /**
+     * Получение Аватар Пользователея
+     *
+     * @return void
+     */
     public function getAvatar(){
         if ($this->avatar !== null) {
-            return "../assets/dist/img/photo1.png" . $this->avatar;
+            return asset("users/") . "/" . $this->name . "/avatar/" . $this->avatar;
         }
 
         return asset("default") . "/photo.png";
+    }
+
+    /**
+     * Получение Роль Пользователея
+     *
+     * @return void
+     */
+    public function getRole() {
+        if (count($this->roles) > 0) {
+            return $this->roles->first();
+        }
+        return null;
     }
 }

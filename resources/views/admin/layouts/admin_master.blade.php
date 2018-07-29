@@ -39,13 +39,21 @@
     <!-- Left side column. contains the sidebar -->
     
     {{--  Подключение СайдБар АдминПанелья  --}}
-    @include("admin.includes.sidebar")
+
+        @include("admin.includes.sidebar")
 
     <!-- =============================================== -->
 
     <!-- Content Wrapper. Contains page content -->
-    {{--  Тело Админпанеля  --}}
-    @yield('content')
+
+    
+
+
+    <div class="content-wrapper">
+        {{--  Тело Админпанеля  --}}
+        @yield('content')
+    </div>
+    
     
     <!-- /.content-wrapper -->
 
@@ -258,6 +266,10 @@
 <script src="{{ asset('admin') }}/plugins/jQuery/jquery-2.2.3.min.js"></script> 
 <!-- Bootstrap 3.3.6 -->
 <script src="{{ asset('admin') }}/bootstrap/js/bootstrap.min.js"></script> 
+<!-- DataTables -->
+<script src="{{ asset('admin') }}/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="{{ asset('admin') }}/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
 <!-- SlimScroll -->
 <script src="{{ asset('admin') }}/plugins/slimScroll/jquery.slimscroll.min.js"></script> 
 <!-- FastClick -->
@@ -266,6 +278,13 @@
 <script src="{{ asset('admin') }}/dist/js/app.min.js"></script> 
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('admin') }}/dist/js/demo.js"></script> 
+<!-- page script -->
+<script>
+  $(function () {
+    $("#example1").DataTable();
+  });
+</script>
+
 </body>
 
 <!-- Mirrored from almsaeedstudio.com/themes/AdminLTE/pages/examples/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Dec 2016 15:13:35 GMT -->

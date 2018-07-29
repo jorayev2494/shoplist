@@ -19,8 +19,8 @@ class CreateTovarsTable extends Migration
             $table->string('model', 100)->nullable();
             $table->text('description')->nullable();
             $table->string('img', 100)->nullable();
-            $table->double('column', 15, 8)->nullable()->default(123.4567);
-            $table->boolean('active')->nullable()->default(true);
+            $table->double('price', 15, 8)->nullable()->default(123.4567);
+            $table->boolean('active')->nullable()->default(false);
             $table->timestamps();
         });
     }
