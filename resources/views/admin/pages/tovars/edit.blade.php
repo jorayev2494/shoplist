@@ -2,7 +2,7 @@
 
 
 @section('content')
-
+{{-- <div class="content-wrapper"> --}}
     <!-- Content Header (Page header) -->
     <section class="content-header">
 
@@ -73,6 +73,13 @@
                             </label>
                         </div>
                     </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <img src="{{ $tovar->getImage() }}" alt="{{ $tovar->getImage() }}" width="150">
+                        </div>
+                    </div>
+                    
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="description">Описание товара</label>
@@ -98,5 +105,6 @@
 
     </section>
     <!-- /.content -->
+{{-- </div> --}}
 @endsection
 

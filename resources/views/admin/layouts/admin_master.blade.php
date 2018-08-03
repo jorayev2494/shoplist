@@ -2,8 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{{-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> --}}
 <title>AdminLTE 2 | Blank Page</title>
+
+{{-- Laravel Ajax --}}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="csrf-token" content="{{ csrf_token() }}">
+{{-- <!-- Bootstrap --> --}}
+
+<link rel="stylesheet" href="{{ asset('admin') }}/style.css">
+
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.6 -->
@@ -84,7 +92,7 @@
             <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
             <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                <h4 class="control-sidebar-subheading">Langdons Birthday</h4>
 
                 <p>Will be 23 on April 24th</p>
             </div>
@@ -256,7 +264,7 @@
     </div>
 </aside>
 <!-- /.control-sidebar -->
-<!-- Add the sidebar's background. This div must be placed
+<!-- Add the sidebars background. This div must be placed
     immediately after the control sidebar -->
 <div class="control-sidebar-bg"></div>
 </div>
@@ -284,6 +292,14 @@
     $("#example1").DataTable();
   });
 </script>
+
+{{-- <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<script src="{{ asset('js/bootstrap.min.js') }}"></script> --}}
 
 </body>
 

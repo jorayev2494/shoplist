@@ -17,14 +17,9 @@
     
         <!-- Main content -->
         <section class="content">
-
-            
-
             
             {!! Form::open(["url" => route("users.update", $user->id), "method" => "PUT", "enctype" => "multipart/form-data"]) !!}
             
-            {{-- <form action="{{ route('users.update', $user->id) }}" method="POST" enctype="multipart/form-data"> --}}
-                {{ csrf_field() }}
                 <!-- Default box -->
                 <div class="box">
                     <div class="box-header with-border">
@@ -61,13 +56,6 @@
                                             <option value="{{ $role->id }}">{{ $role->title }}</option>
                                         @endforeach
                                         
-                                        {{-- <option>Alabama</option>
-                                        <option>Alaska</option>
-                                        <option selected="selected">California</option>
-                                        <option>Delaware</option>
-                                        <option>Tennessee</option>
-                                        <option>Texas</option>
-                                        <option>Washington</option> --}}
                                     </select>
                                 </div>
             
@@ -98,7 +86,6 @@
                     <!-- /.box-footer-->
                 </div>
                 <!-- /.box -->
-            {{-- </form> --}}
             
             {!! Form::close() !!}
             

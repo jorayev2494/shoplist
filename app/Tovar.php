@@ -20,8 +20,7 @@ class Tovar extends Model
      */
     public function getImage() {
         if($this->img != null) {
-            // public_path("tovars/") . $tovar->category->prefix . "/" . $data["name"] . "/image/", $input["image"]);
-            return asset("tovars") . "/" . $this->category->prefix . "/" . $this->name . "/image/" . $this->img;
+            return asset(env("APP_NAME")) . "/images/tovars/" . $this->category->prefix . "/" . $this->name . "/image/" . $this->img;
         }
 
         return asset("default") . "/photo.png";

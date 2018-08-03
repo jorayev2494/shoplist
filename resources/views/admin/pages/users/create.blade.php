@@ -55,14 +55,7 @@
                                         @foreach ($roles as $role)
                                             <option value="{{ $role->id }}">{{ $role->title }}</option>
                                         @endforeach
-                                        
-                                        {{-- <option>Alabama</option>
-                                        <option>Alaska</option>
-                                        <option selected="selected">California</option>
-                                        <option>Delaware</option>
-                                        <option>Tennessee</option>
-                                        <option>Texas</option>
-                                        <option>Washington</option> --}}
+                                    
                                     </select>
                                 </div>
 
@@ -97,6 +90,6 @@
         
         </section>
         <!-- /.content -->
-        {{-- </div> --}}
+        </div>
 @endsection
     

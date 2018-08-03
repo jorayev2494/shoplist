@@ -2,11 +2,13 @@
 @extends('admin.layouts.admin_master')
 
 @section('content')
+{{-- <div class="content-wrapper"> --}}
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
         
         {{-- Подключение Вывод Сессии --}}
-        @include("includes.session_alert")
+        @include("includes.session_alert")        
 
         <h1>
             Blank page
@@ -62,12 +64,12 @@
                             <td>{{ ($user->getRole()) ? $user->getRole()->title : "Пусто" }}</td>
 
                             <td>
-                                <a href="{{ route('users.edit', $user->id) }}" class="fa fa-pencil"></a>
+                                <a href="{{ route('users.edit', $user->id) }}" style="margin-bottom: 5px;" class="btn btn-success">Редактировать</a>
 
                                 {!! Form::open(["url" => route("users.destroy", $user->id), "method" => "DELETE"]) !!}
                                     {{-- <a href="#" class="fa fa-remove"></a> --}}
                                     {{-- {!! Form::submit("Удалить", ["class" => "btn btn-danger fa fa-remove"]) !!} --}}
-                                    {!! Form::submit(null, ["class" => "fa fa-remove"]) !!}
+                                    {!! Form::submit(null, ["class" => "btn btn-danger"]) !!}
                                 {!! Form::close() !!}
                             </td>
                         </tr>
@@ -86,4 +88,5 @@
 
     </section>
     <!-- /.content -->
+    {{-- </div> --}}
 @endsection

@@ -8,6 +8,7 @@ use App\Category;
 use App\Tovar;
 use Validator;
 use Illuminate\Routing\Redirector;
+use Config;
 
 class TovarsController extends Controller
 {
@@ -18,7 +19,7 @@ class TovarsController extends Controller
      */
     public function index()
     {
-        $tovars = Tovar::orderBy('created_at','desc')->paginate(8);
+        $tovars = Tovar::orderBy('created_at','desc')->paginate(Config::get('settings.count_tovars'));
         return view("admin.pages.tovars.index")->with("tovars", $tovars);
     }
 
@@ -64,12 +65,13 @@ class TovarsController extends Controller
             "model" => $data["model"],
             "description" => $data["description"],
             "category_id" => $data["category"],
+            // "category_id" => 1,
             "price" => $data["price"],
         ]);
 
         if ($request->hasFile("image")) {
             $input["image"] = $image->getClientOriginalName();
-            $image->move(public_path("tovars/") . $tovar->category->prefix . "/" . $data["name"] . "/image/", $input["image"]);
+            $image->move(public_path(env("APP_NAME")) . "/images/tovars/" . $tovar->category->prefix . "/" . $data["name"] . "/image/", $input["image"]);
             $tovar->img = $input["image"];
             $tovar->save();
         }
@@ -136,7 +138,7 @@ class TovarsController extends Controller
         if ($request->hasFile("image")) {
             $image = $request->file("image"); 
             $input["image"] = $image->getClientOriginalName();
-            $image->move(public_path("tovars/") . $tovar->category->prefix . "/" . $data["name"] . "/image/", $input["image"]);
+            $image->move(public_path(env("APP_NAME")) . "/images/tovars/" . $tovar->category->prefix . "/" . $data["name"] . "/image/", $input["image"]);
             $tovar->img = $input["image"];
             $tovar->save();
         }

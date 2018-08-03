@@ -3,7 +3,7 @@
 
 
 @section('content')
-
+{{-- <div class="content-wrapper"> --}}
     <!-- Content Header (Page header) -->
     <section class="content-header">
 
@@ -84,7 +84,7 @@
                 <div class="box-footer">
                     <a href="{{ route('tovars.index') }}" class="btn btn-default">Назад</a>
                     
-                    {!! Form::submit("Добавить", ["class" => "btn btn-success pull-right"]) !!}
+                    {!! Form::submit("Добавить", ["id" => "save", "class" => "btn btn-success pull-right"]) !!}
                     
                     {{-- <button class="btn btn-success pull-right">Добавить</button> --}}
                 </div>
@@ -97,6 +97,36 @@
 
     </section>
     <!-- /.content -->
-    
+{{-- </div> --}}
+
+<script>
+
+    $(function() {
+        
+        $('#save').on('click',function(){
+        
+            var title = $('#title').val();
+            
+            var text = $('#text').val();
+            
+            $.ajax({
+            
+                url: '{{ route('tovars.store') }}',
+                
+                type: "POST",
+                
+                data: {name:name},
+                
+                headers: {
+                
+                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+                
+                }
+            }
+        }
+    }
+
+</script>
+        
 @endsection
 

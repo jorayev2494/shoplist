@@ -1,6 +1,7 @@
 @extends('admin.layouts.admin_master')
 
 @section('content')
+{{-- <div class="content-wrapper"> --}}
     <!-- Content Header (Page header) -->
     <section class="content-header">
 
@@ -54,19 +55,19 @@
                                 <td>{{ $tovar->name }}</td>
                                 <td>{{ $tovar->model }}</td>
                                 <td>{{ $tovar->category->title }}</td>
-                                <td>{{ $tovar->description }}</td>
+                                <td>{{ str_limit($tovar->description, 100) }}</td>
                                 <td>
                                     <img src="{{ $tovar->getImage() }}" alt="{{ $tovar->getImage() }}" width="75">
                                 </td>
                                 <td>{{ $tovar->active }}</td>
                                 <td>{{ $tovar->price }}</td>
                                 <td>
-                                    <a href="{{ route('tovars.edit', $tovar->id) }}" class="fa fa-pencil"></a>
+                                    <a href="{{ route('tovars.edit', $tovar->id) }}" style="margin-bottom: 5px;" class="btn btn-success">Редактировать</a>
 
                                     {!! Form::open(["url" => route("tovars.destroy", $tovar->id), "method" => "DELETE"]) !!}
                                         {{-- <a href="#" class="fa fa-remove"></a> --}}
                                         {{-- {!! Form::submit("Удалить", ["class" => "btn btn-danger fa fa-remove"]) !!} --}}
-                                        {!! Form::submit(null, ["class" => "fa fa-remove"]) !!}
+                                        {!! Form::submit(null, ["class" => "btn btn-danger"]) !!}
                                     {!! Form::close() !!}
                                 </td>
                             </tr>   
@@ -84,5 +85,6 @@
     
     </section>
     <!-- /.content -->
+{{-- </div> --}}
 @endsection
 

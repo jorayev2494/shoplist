@@ -1,5 +1,12 @@
 {
     "/js/app.js": "/js/app.js",
+    "/shoplist/js/js.js": "/shoplist/js/js.js",
     "/css/app.css": "/css/app.css",
+    "/shoplist/css/style.css": "/shoplist/css/style.css",
+    "/shoplist/fonts/glyphicons-halflings-regular.eot": "/shoplist/fonts/glyphicons-halflings-regular.eot",
+    "/shoplist/fonts/glyphicons-halflings-regular.svg": "/shoplist/fonts/glyphicons-halflings-regular.svg",
+    "/shoplist/fonts/glyphicons-halflings-regular.ttf": "/shoplist/fonts/glyphicons-halflings-regular.ttf",
+    "/shoplist/fonts/glyphicons-halflings-regular.woff": "/shoplist/fonts/glyphicons-halflings-regular.woff",
+    "/shoplist/fonts/glyphicons-halflings-regular.woff2": "/shoplist/fonts/glyphicons-halflings-regular.woff2",
     "/admin/style.css": "/admin/style.css"
 }

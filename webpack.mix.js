@@ -11,6 +11,47 @@
  |
  */
 
+
+ /**
+  *  Shopica Assets
+  */
+/**
+ *  Styles
+ */
+mix.styles([
+    "resources/assets/shoplist/css/bootstrap.css",
+    "resources/assets/shoplist/css/flexslider.css",
+    "resources/assets/shoplist/css/style.css",
+], "public/shoplist/css/style.css");
+
+/**
+ *  Js
+ */
+mix.js([
+    "resources/assets/shoplist/js/bootstrap.min.js",
+    "resources/assets/shoplist/js/imagezoom.js",
+    "resources/assets/shoplist/js/jquery-1.11.0.min.js",
+    "resources/assets/shoplist/js/jquery.flexslider.js",
+    "resources/assets/shoplist/js/jquery.jscrollpane.min.js",
+    "resources/assets/shoplist/js/simpleCart.min.js",
+    "resources/assets/shoplist/js/master.js",
+], "public/shoplist/js/js.js");
+
+/**
+ * Fonts
+ */
+mix.copy([
+    "resources/assets/shoplist/fonts/glyphicons-halflings-regular.eot",
+    "resources/assets/shoplist/fonts/glyphicons-halflings-regular.svg",
+    "resources/assets/shoplist/fonts/glyphicons-halflings-regular.ttf",
+    "resources/assets/shoplist/fonts/glyphicons-halflings-regular.woff",
+    "resources/assets/shoplist/fonts/glyphicons-halflings-regular.woff2",
+], "public/shoplist/fonts/")
+
+
+/**
+ *  Admin Assets
+ */
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
 
