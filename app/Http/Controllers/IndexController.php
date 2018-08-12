@@ -9,6 +9,7 @@ use App\Category;
 use App\Tovar;
 use App\Menu;
 use App\Repositories\CategoryRepository;
+Use Session;
 
 class IndexController extends MasterController
 {
@@ -20,7 +21,16 @@ class IndexController extends MasterController
     }
 
     public function index() {
+
+        // $customer = \App\Customer::first();
+        // $orders = \App\Customer::first()->orders;
+        // dd([$customer, $orders]);
+
+        // dd(Session::all());
+        // Session::flush();
+
         $tovars = $this->tovar_r->get();
+        // dd($tovars);
         return $this->outputView("pages.index", "tovars", $tovars);
     }
 
@@ -30,8 +40,12 @@ class IndexController extends MasterController
     }
 
     public function single($category, $id) {
+
+        // dd(Session::all());
+        // Session::flush();
+
         $tovar = $this->tovar_r->singleTovar($id);
-        $tovars = $this->category_r->getCategoryTovars($category);
+        $tovars = $this->category_r->getCategoryTovars($category, $id);
         $this->vars = array_add($this->vars, "tovars", $tovars);
         return $this->outputView("pages.single", "tovar", $tovar);
     }

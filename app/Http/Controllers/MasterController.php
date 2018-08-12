@@ -18,6 +18,7 @@ class MasterController extends Controller
 
     protected $template;                //
     protected $vars = array();          //
+    protected $cart = array();          // 
 
     public function __construct(MenusRepository $menus)
     {

@@ -14,6 +14,13 @@ abstract class Repository
         return $bulider;
     }
 
+    // Поучить только один товар из БД-х
+    public function getOnce($select = "*", $id) {
+        $builder = $this->model->where("active", true)->select($select)->find($id);
+        return $builder;
+    }
+
+    
     public function showMenuCategory($menu, $category) {
         $builderMenu = $this->model->where("prefix", $menu)->first();
         $builderCategory = $builderMenu->categories->where("prefix", $category)->first();
@@ -33,22 +40,4 @@ abstract class Repository
     }
 
 
-    // Корзина
-
-    public function toCart($id) {
-        $buider = $this->model->where('active', true)->find($id)->first();
-
-        if ($builder) {
-            return $builder;
-        }
-
-        return fales;
-
-    }
-
-    // Получить один товар
-    public function getOnceTovar() {
-        echo "55555";
-        // return $builder;
-    }
 }

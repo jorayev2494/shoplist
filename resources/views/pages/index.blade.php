@@ -10,15 +10,15 @@
                     <div class="col-md-3 home-grid">
                         <div class="home-product-main">
                             <div class="home-product-top" style="height: 250px;">
-                                <a href="product.html">
+                                <a href="{{ route('show.single', ['category' => $tovar->category->prefix, $tovar->id]) }}">
                                     <img src="{{ $tovar->getImage() }}" alt="{{ $tovar->getImage() }}" class="img-responsive zoom-img" width="250" height="250">
                                 </a>
                             </div>
                             <div class="home-product-bottom">
                                 <h3>
-                                    <a href="single.html">{{ $tovar->name }}</a>
+                                    <a href="{{ route('show.single', ['category' => $tovar->category->prefix, $tovar->id]) }}">{{ $tovar->name }}</a>
                                 </h3>
-                                <p>wadwad</p>						
+                                <p>{{ $tovar->model }}</p>						
                             </div>
                             <div class="srch">
                                 <span>$ {{ $tovar->price }}</span>

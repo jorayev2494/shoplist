@@ -28,14 +28,14 @@ mix.styles([
  *  Js
  */
 mix.js([
-    "resources/assets/shoplist/js/bootstrap.min.js",
-    "resources/assets/shoplist/js/imagezoom.js",
-    "resources/assets/shoplist/js/jquery-1.11.0.min.js",
-    "resources/assets/shoplist/js/jquery.flexslider.js",
-    "resources/assets/shoplist/js/jquery.jscrollpane.min.js",
+    // "resources/assets/shoplist/js/bootstrap.min.js",
+    // "resources/assets/shoplist/js/imagezoom.js",
+    // "resources/assets/shoplist/js/jquery-1.11.0.min.js",
+    // "resources/assets/shoplist/js/jquery.flexslider.js",
+    // "resources/assets/shoplist/js/jquery.jscrollpane.min.js",
     "resources/assets/shoplist/js/simpleCart.min.js",
-    "resources/assets/shoplist/js/master.js",
-], "public/shoplist/js/js.js");
+    // "resources/assets/shoplist/js/master.js",
+], "public/shoplist/js/cart.js");
 
 /**
  * Fonts

@@ -30,15 +30,25 @@
                     <div class="search-text">
                         {{--  <input class="serch" type="text" value="@lang('langue.search')" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"/>  --}}
                     </div>
+
+                    {{--  <a class="btn btn-default btn-lg" href="cart.php">
+                        ({{ count($cart) }})
+                        Корзина 
+                        <span class="badge basker_kol">0</span>
+                    </a  --}}
+
                     <div class="cart box_1">
                         <a href="{{ route('cart.index') }}">
                             <h3>
                                 <img src="{{ asset('shoplist') }}/images/cart.png" alt=""/>
                                 <div class="total">
-                                <span class="simpleCart_total"></span></div>
+                                    <span id="cart_total">0</span> $ |  Count: <span id="cart_count">0</span>
+                                    {{--  <span id="cart_total" class="simpleCart_total"></span>  --}}
+                                </div>
                             </h3>
                         </a>
-                        <p><a href="javascript:;" class="simpleCart_empty">@lang('langue.empty_cart')</a></p>
+                        {{--  <p><a href="javascript:;" class="simpleCart_empty">@lang('langue.empty_cart')</a></p>  --}}
+                        <p><a href="javascript:;" id="empty_cart" class="simpleCart_empty">@lang('langue.empty_cart')</a></p>
                     </div>   
 
                     <div class="head-signin">

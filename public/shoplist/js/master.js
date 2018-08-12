@@ -4,14 +4,15 @@ jQuery(document).ready(function($) {
     //     $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
     // });
 
-    // Sarted Ajax
-    $('#getRequest').click(function() {
+    // Sarted Ajax  -----------------------------------------
+    // $('#getRequest').click(function() {
 
-        $("#getRequest").click(function() {
-            $.get("getRequest", function(data) {
-                console.log(data);
-            });
-        });
+    //     $("#getRequest").click(function() {
+    //         $.get("getRequest", function(data) {
+    //             console.log(data);
+    //         });
+    //     });
+    // ------------------------------------------------------
 
 
 
@@ -33,7 +34,7 @@ jQuery(document).ready(function($) {
         // })
 
         // alert($(this).text());
-    });
+    // }); -----------------------------------------------------------
 
 
     // $("#add_to_cart").click(function() {
@@ -65,37 +66,37 @@ jQuery(document).ready(function($) {
     //     });
     // });
 
-     // Наше событя вход 
-     $("#add_to_cart").click(function() {
+//      // Наше событя вход  ---------------------------------------------------------------------
+//      $("#add_to_cart").click(function() {
 
-        // Пролучить данные из Document DOM 
-        var tId = $(this).data('id');
-        var token = $("#token").attr("content");   
-        // var tId = $("#idTovar").text();
-        var tName  = $("H1").text();
-        var tModel = $("H3").text();
-        var tPrice = $("#price").text();
-        console.log([token, tId, tName, tModel, tPrice]);
-        console.log([token, tId]);
+//         // Пролучить данные из Document DOM 
+//         var tId = $(this).data('id');
+//         var token = $("#token").attr("content");   
+//         // var tId = $("#idTovar").text();
+//         var tName  = $("H1").text();
+//         var tModel = $("H3").text();
+//         var tPrice = $("#price").text();
+//         console.log([token, tId, tName, tModel, tPrice]);
+//         console.log([token, tId]); ---------------------------------------------------------------------
 
-        // Показать Корзину ОДОБРЕНО
-        // $.get("/cart", function(data) {
-        //     console.log(data);
-        // });
+//         // Показать Корзину ОДОБРЕНО
+//         // $.get("/cart", function(data) {
+//         //     console.log(data);
+//         // });
 
-        // запрос к GET запросу /add_cart
-        // $.get("/add_cart", function(data) {
-        //     console.log(data);
-        // });
+//         // запрос к GET запросу /add_cart
+//         // $.get("/add_cart", function(data) {
+//         //     console.log(data);
+//         // });
 
-        // запрос к POST запросу /getRequest
-        $.post("/add_cart", {_token:token, tId:tId, tName:tName, tModel:tModel, tPrice:tPrice}, function(data) {
-            if (data[0] == false) {
-                alert("ОШИБКА!");
-            }
-            console.log(data)
-        });
-    });
+//         // запрос к POST запросу /getRequest ---------------------------------------------------------------------
+//         $.post("/add_cart", {_token:token, tId:tId, tName:tName, tModel:tModel, tPrice:tPrice}, function(data) {
+//             if (data[0] == false) {
+//                 alert("ОШИБКА!");
+//             }
+//             console.log(data)
+//         });
+//     }); ---------------------------------------------------------------------
 
 });
 

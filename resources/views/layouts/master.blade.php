@@ -10,7 +10,7 @@
 
 		{{--  LAravel Token  --}}
 		<meta name="csrf-token" id="token" content="{{ csrf_token() }}">
-
+		
 		<!-- Custom Theme files -->
 		{{-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/> --}}
 
@@ -29,8 +29,11 @@
 		{{-- <script type="text/javascript" src="js/move-top.js"></script> --}}
 		{{-- <script type="text/javascript" src="js/easing.js"></script> --}}
 
+
 		<script src="{{ asset('shoplist') }}/js/master.js"></script>
 
+		{{--  Подключение скрипт корзины с Ajax запросом  --}}
+		<script src="{{ asset('shoplist') }}/js/cart.js"></script>
 
 		<!-- //end-smoth-scrolling -->
 		<script src="{{ asset('shoplist') }}/js/simpleCart.min.js"></script>
@@ -39,11 +42,7 @@
 		<!--flex slider-->
 		<script defer src="{{ asset('shoplist') }}/js/jquery.flexslider.js"></script>
 
-
-
 		<script type="text/javasctipt" src="{{ asset('js') }}/jQuery.js"></script>
-
-
 
 	</head>
 	<body>

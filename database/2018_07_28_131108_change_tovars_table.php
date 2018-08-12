@@ -14,7 +14,7 @@ class ChangeTovarsTable extends Migration
     public function up()
     {
         Schema::table('tovars', function (Blueprint $table) {
-            $table->integer('category_id')->unsigned()->index();
+            $table->integer('category_id')->unsigned()->index()->default(1);
             $table->foreign('category_id')->references('id')->on('categories');
         });
     }

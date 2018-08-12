@@ -13,6 +13,11 @@ class Tovar extends Model
         return $this->belongsTo('App\Category', "category_id");
     }
 
+    public function order()
+    {
+        return $this->belongsTo('App\Order');  // , 'foreign_key', 'other_key'
+    }
+
     /**
      * Получить Изображение товаров
      *
@@ -25,6 +30,8 @@ class Tovar extends Model
 
         return asset("default") . "/photo.png";
     }
+
+
 
 
 

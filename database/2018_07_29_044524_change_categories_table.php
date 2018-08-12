@@ -15,7 +15,7 @@ class ChangeCategoriesTable extends Migration
     {
         Schema::table('categories', function (Blueprint $table) {
             $table->boolean('active')->default(false);
-            $table->integer('menu_id')->unsigned()->index();
+            $table->integer('menu_id')->unsigned()->index()->default(1);
             $table->foreign('menu_id')->references('id')->on('menus');
         });
     }

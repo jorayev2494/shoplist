@@ -1362,6 +1362,27 @@ a.add-cart:hover {
 	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
+
+
+
+
+/*************************************************************/
+
+.btn-del {
+    background: url('../images/close-1.png') no-repeat 0px 0px;
+	cursor: pointer;
+	width:15px;
+	height:15px;
+	position: absolute;
+    right: 1%;
+    top: 40%;
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+  }
+  
+  /*************************************************************/
 .check-in {
 	width:100%;
 	margin: 2em 0 2em;
@@ -2745,6 +2766,18 @@ ul.unit li span {
     height: 10px;
     background-size: 100%;
 }
+
+
+
+/*************************************************************/
+
+.btn-del {
+    width: 9px;
+    height: 10px;
+    background-size: 100%;
+  }
+  
+  /*************************************************************/
 .press-left {
     padding: 0px;
 }
