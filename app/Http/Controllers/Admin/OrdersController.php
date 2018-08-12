@@ -17,7 +17,6 @@ class OrdersController extends MasterController
     public function index()
     {
         $customers = Customer::all();
-        // return $this->outputView("admin.pages.orders.index");
         return view("admin.pages.orders.index")->with('customers', $customers);
     }
 
@@ -50,11 +49,7 @@ class OrdersController extends MasterController
      */
     public function show($id)
     {
-        // dd(Customer::all());
-
         $customer = Customer::find($id);
-        // dd($customer);
-        // dd($customer->orders);
         return view("admin.pages.orders.customer")->with("customer", $customer);    
     }
 
